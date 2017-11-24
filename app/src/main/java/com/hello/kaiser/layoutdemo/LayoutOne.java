@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.bumptech.glide.Glide;
+
 /**
  * Created by kaiser on 2017/11/24.
  */
@@ -18,5 +20,8 @@ public class LayoutOne extends RelativeLayout {
         addView(view);
 
         ImageView image = (ImageView) view.findViewById(R.id.image_item);
+        Glide.with(context)
+                .load("https://images.gamme.com.tw/news2/2013/37/36/p6CTnZ_claCX.jpg")
+                .into(image);
     }
 }
